@@ -1,0 +1,6 @@
+print('+' * 50)
+km = float(input('Informe a kilometragem: '))
+dias = int(input('Infrome a quantidade de dias: '))
+preco = (dias * 60) + (km * 0.15)
+print('O valor a pagar pelo aluguel é R${:.2f}'.format(preco))
+print('-' * 50)

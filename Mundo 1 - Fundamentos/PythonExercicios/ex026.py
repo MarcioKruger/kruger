@@ -1,0 +1,8 @@
+print('+' * 70)
+f = str(input('Escreva uam frase: ')).strip()
+frase = f.upper()
+print('A letra "A" aparece {} vezes'.format(frase.count('A')))
+print('a primeira aparição de "A" é na posição {}'.format(frase.find('A') + 1))
+s = f.split()
+print('a última aparição de "A" é na posição {}'.format(frase.rfind('A') + 1))
+print('-' * 70)

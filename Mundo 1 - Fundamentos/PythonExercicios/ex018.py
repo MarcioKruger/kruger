@@ -1,0 +1,10 @@
+print('+' * 60)
+import math
+a = float(input('Digite o angulo: '))
+s = math.sin(math.radians(a))
+c = math.cos(math.radians(a))
+t = math.tan(math.radians(a))
+print('O angulo de {} tem o seno de {:.2f}'.format(a, s))
+print('O angulo de {} tem o coseno de {:.2f}'.format(a, c))
+print('O angulo de {} tem  a tangente de {:.2f}'.format(a, t))
+print('-' * 60)

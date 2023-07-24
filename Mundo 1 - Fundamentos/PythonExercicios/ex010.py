@@ -1,0 +1,6 @@
+print('$' * 30)
+r = float(input('Qaunto em REAIS: R$ '))
+d = (r / 4.79)
+print('$' * 20)
+print('R$ {:.2f} equivale a US$ {:.2f}'.format(r, d))
+print('$' * 30)
