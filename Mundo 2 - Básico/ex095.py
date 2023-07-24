@@ -6,15 +6,26 @@ while True:
     jogador = {}  #Dicionário para adicionar as informações de cada jogador.
     nome = str(input('Nome do jogador: '))
     jogador['Jogador'] = nome #adiciona o nome do jogador no dicionário.
-    partidas = int(input(f'Quantas partidas {nome} jogou: '))
+    while True:   #Codigo não ermite que o usuário digite nada além de números inteiros.
+        try:
+            partidas = int(input(f'Quantas partidas {nome} jogou: '))
+            break  # Saímos do loop quando o número for válido
+        except ValueError:
+            print("Por favor, digite um valor numérico válido.")
+
     jogador['partidas'] = partidas #adiciona a quantidade de partidas no dicionário.
     print('===' * 15)
     quantidade = {}  #Dicionário para adicionar a quantidade de partidas de cada jogador cadastrado.
 
     #Estrutura para cadastrar os gols de cada partida do jogador.
     for i in range(partidas):
-        gol = int(input(f'Quantos gols na Partida {i + 1}: '))
-        quantidade[f'Partida {i + 1}'] = gol
+        while True:   #Codigo não ermite que o usuário digite nada além de números inteiros.
+            try:
+                gol = int(input(f'Quantos gols na Partida {i + 1}: '))
+                quantidade[f'Partida {i + 1}'] = gol
+                break  # Saímos do loop quando o número for válido
+            except ValueError:
+                print("Por favor, digite um valor numérico válido.")
     c = 0
     for i, k in quantidade.items():
         c = k + c
