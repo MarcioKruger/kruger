@@ -1,6 +1,28 @@
 print('===' * 15)
 print('       --- ESTATÍSTICA DO FUTEBOL ---')
 print('===' * 15)
+def estatistica(jogador): 
+     #Código que mostra as estatísticas do jogador que o usuário digitou para analisar.
+    c = 0
+    for i, k in quantidade.items():
+        c = k + c
+    encontrado['total'] = c
+    encontrado['gols'] = quantidade
+    print('===' * 15)
+    for i, k in encontrado.items():
+        print(f'{i} => {k}')
+    print('===' * 15)
+    tirado = encontrado['gols']
+    g = len(tirado)
+    print(f'O jogador {encontrado["Jogador"]} jogou {g} partidas:')
+    print()
+    for i, k  in tirado.items():
+        print(f'   => Na partida {i}, fez {k} gols')
+    print('===' * 15)
+    print(f"     -> Fez um total de {encontrado['total']} Gols...")
+    quat = len(encontrado['gols'])
+    media = encontrado['total'] / quat
+    print(f'     -> Teve uma media de {media:.1f} gols por partida.')
 lista = [] #Lista para adicionar os dicionários contendo as informações do jogadores cadastrados.
 while True:
     jogador = {}  #Dicionário para adicionar as informações de cada jogador.
@@ -34,7 +56,7 @@ while True:
     jogador['gols'] = quantidade
     lista.append(jogador)
     #Estrutura criar mais uma lista com os dados de mais um jogador a ser cadastrado.
-    pergunta = str(input('Adciconar mais um josgador? [S/N]: ')).upper()
+    pergunta = str(input('Adciconar mais um jogador? [S/N]: ')).upper()
     if pergunta == 'N':
         break
 #Mostra os jogadores cadastrados com algumas informações sobre os jogadores.
@@ -54,42 +76,21 @@ print()
 while True:
     pergu = str(input('Deseja ver estatísticas: S/N ')).upper().split()[0]
     if pergu == 'S':
-        #Estrutura que pergunta o nome do jogador para ser obtido uma análise mais completa.
-        p = str(input('Digite o nome do jogador: '))
+        while True:
+            p = str(input('Digite o nome do jogador: '))
+            encontrado = None
+            for dicionario in est:
+                if dicionario['Jogador'] == p:
+                    encontrado = dicionario
+                    break
+            if encontrado:
+                print(f'{encontrado["Jogador"]} encontrado')
+                estatistica(encontrado)  # Chama a função para exibir as estatísticas completas
+                break
+            else:
+                print(f'{p} não encontrado. Digite novamente.')
     else:
-        break
-    #Código que verifica se o nome do jogador digita pelo usuário está cadastrado.
-    encontrado = None
-    for dicionario in est:
-        if dicionario['Jogador'] == p:
-            encontrado = dicionario
-            break
-    if encontrado:
-        print(f'{encontrado["Jogador"]} encontrado')
-    else:
-        print(f'{p} não encontrado')
-        break
-    #Código que mostra as estatísticas do jogador que o usuário digitou para analisar.
-    c = 0
-    for i, k in quantidade.items():
-        c = k + c
-    encontrado['total'] = c
-    encontrado['gols'] = quantidade
-    print('===' * 15)
-    for i, k in encontrado.items():
-        print(f'{i} => {k}')
-    print('===' * 15)
-    tirado = encontrado['gols']
-    g = len(tirado)
-    print(f'O jogador {encontrado["Jogador"]} jogou {g} partidas:')
-    print()
-    for i, k  in tirado.items():
-        print(f'   => Na partida {i}, fez {k} gols')
-    print('===' * 15)
-    print(f"     -> Fez um total de {encontrado['total']} Gols...")
-    quat = len(encontrado['gols'])
-    media = encontrado['total'] / quat
-    print(f'     -> Teve uma media de {media:.1f} gols por partida.')
+        break   
 print('===' * 15)
 print()
 print('    ===== ESTATÍSTICA ENCERRADAS =====')
