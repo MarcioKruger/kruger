@@ -1,5 +1,6 @@
 import time
 
+
 def contador(inicio, fim, passo):
     if passo == 0:
         print("O passo não pode ser igual a zero.")
@@ -17,9 +18,9 @@ def contador(inicio, fim, passo):
             time.sleep(1)  # Pausa por 1 segundo
         print("FIM!")
 
+        
 inicio = int(input("Digite o valor inicial: "))
 fim = int(input("Digite o valor final: "))
 passo = int(input("Digite o passo: "))
-
 print("\nContagem personalizada:")
 contador(inicio, fim, passo)

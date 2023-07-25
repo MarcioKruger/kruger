@@ -16,7 +16,7 @@ def somaPar(num):
         if numero % 2 ==0:
             soma = soma + numero
     return soma
-    
+
 
 sorteados = sorteia()
 print(f'Os numeros sorteados foram : {sorteados} ')
