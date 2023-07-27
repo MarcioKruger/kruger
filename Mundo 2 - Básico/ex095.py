@@ -23,6 +23,8 @@ def estatistica(jogador):
     quat = len(encontrado['gols'])
     media = encontrado['total'] / quat
     print(f'     -> Teve uma media de {media:.1f} gols por partida.')
+
+    
 lista = [] #Lista para adicionar os dicionários contendo as informações do jogadores cadastrados.
 while True:
     jogador = {}  #Dicionário para adicionar as informações de cada jogador.
