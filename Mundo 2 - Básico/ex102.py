@@ -20,6 +20,6 @@ def fatorial(n, show=False):
         fatorial *= i
     return fatorial
 
-#Programa principal    
+#Programa principal
 print(fatorial(5))
 help(fatorial)

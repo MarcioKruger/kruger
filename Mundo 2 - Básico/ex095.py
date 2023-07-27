@@ -1,6 +1,8 @@
 print('===' * 15)
 print('       --- ESTATÍSTICA DO FUTEBOL ---')
 print('===' * 15)
+
+
 def estatistica(jogador): 
      #Código que mostra as estatísticas do jogador que o usuário digitou para analisar.
     c = 0
@@ -24,7 +26,7 @@ def estatistica(jogador):
     media = encontrado['total'] / quat
     print(f'     -> Teve uma media de {media:.1f} gols por partida.')
 
-    
+
 lista = [] #Lista para adicionar os dicionários contendo as informações do jogadores cadastrados.
 while True:
     jogador = {}  #Dicionário para adicionar as informações de cada jogador.
