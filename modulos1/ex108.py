@@ -1,0 +1,16 @@
+import moeda
+print('===' * 15)
+print('       --- MOEDAS EM PYTHON ---')
+print('===' * 15)
+
+numero = float(input('Digite o valor: R$ '))
+print()
+dob = moeda.dobro(numero)
+print(f'O dobro de {moeda.moeda(numero)} é {moeda.moeda(dob)}')
+print()
+print(f'A metade de {moeda.moeda(numero)} é {moeda.moeda(moeda.metade(numero))}')
+print()
+print(f'10% de {moeda.moeda(numero)} é {moeda.moeda(moeda.diminuir(numero))}')
+print()
+print(f'Mais 10% de {moeda.moeda(numero)} é {moeda.moeda(moeda.aumentar(numero))}')
+print()
