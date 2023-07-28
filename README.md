@@ -1,4 +1,7 @@
 # kruger
- Primeiro repositorio
+ Primeiro de Márcio Krüger.
 
- teste de repositorio
+ - Este repositório foi criado em aula de Git e GitHub.
+ - Todos os código colocados neste repositório são referentes as aulas de python.
+
+ 
